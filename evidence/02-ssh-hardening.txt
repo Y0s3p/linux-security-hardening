@@ -1,0 +1,4 @@
+maxauthtries 3
+permitrootlogin prohibit-password
+pubkeyauthentication yes
+passwordauthentication no

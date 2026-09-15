@@ -1,0 +1,122 @@
+========================================
+ Linux Security Audit
+========================================
+
+[+] System
+Hostname: soc-server
+Effective user: root
+Audit launched by: jose
+
+[+] IP Configuration:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             192.168.1.35/24 metric 100 fe80::a00:27ff:fe67:5b70/64 
+
+[+] Firewall
+PASS: UFW is active
+
+[+] Firewall policy
+PASS: Default incoming policy is deny
+
+[+] SSH configuration
+PASS: SSH password authentication is disabled
+PASS: SSH MaxAuthTries is set to 3
+PASS: SSH root login is restricted
+PASS: SSH public key authentication is enabled
+
+[+] Network exposure
+INFO: Externally exposed TCP ports:
+PASS: TCP port 22 is allowed
+FAIL: Unexpected TCP port 8080 is exposed
+
+[+] Sudo privileges
+INFO: Users in sudo group:
+jose
+
+[+] Network services
+INFO: TCP listening sockets:
+LISTEN 0      4096         0.0.0.0:22   0.0.0.0:*
+LISTEN 0      5            0.0.0.0:8080 0.0.0.0:*
+LISTEN 0      4096      127.0.0.54:53   0.0.0.0:*
+LISTEN 0      4096   127.0.0.53%lo:53   0.0.0.0:*
+LISTEN 0      4096            [::]:22      [::]:*
+
+[+] SSH network exposure
+INFO: SSH is listening on network interfaces
+
+[+] Unnecessary services
+PASS: ModemManager is disabled
+PASS: multipathd is disabled
+PASS: udisks2 is disabled
+
+========================================
+ Audit Summary
+========================================
+PASS: 10
+WARN: 0
+FAIL: 1
+INFO: 4
+Overall status: FAIL
+
+========================================
+ Audit completed
+========================================
+========================================
+ Linux Security Audit
+========================================
+
+[+] System
+Hostname: soc-server
+Effective user: root
+Audit launched by: jose
+
+[+] IP Configuration:
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             192.168.1.35/24 metric 100 fe80::a00:27ff:fe67:5b70/64 
+
+[+] Firewall
+PASS: UFW is active
+
+[+] Firewall policy
+PASS: Default incoming policy is deny
+
+[+] SSH configuration
+PASS: SSH password authentication is disabled
+PASS: SSH MaxAuthTries is set to 3
+PASS: SSH root login is restricted
+PASS: SSH public key authentication is enabled
+
+[+] Network exposure
+INFO: Externally exposed TCP ports:
+PASS: TCP port 22 is allowed
+
+[+] Sudo privileges
+INFO: Users in sudo group:
+jose
+
+[+] Network services
+INFO: TCP listening sockets:
+LISTEN 0      4096         0.0.0.0:22 0.0.0.0:*
+LISTEN 0      4096      127.0.0.54:53 0.0.0.0:*
+LISTEN 0      4096   127.0.0.53%lo:53 0.0.0.0:*
+LISTEN 0      4096            [::]:22    [::]:*
+
+[+] SSH network exposure
+INFO: SSH is listening on network interfaces
+
+[+] Unnecessary services
+PASS: ModemManager is disabled
+PASS: multipathd is disabled
+PASS: udisks2 is disabled
+
+========================================
+ Audit Summary
+========================================
+PASS: 10
+WARN: 0
+FAIL: 0
+INFO: 4
+Overall status: PASS
+
+========================================
+ Audit completed
+========================================
